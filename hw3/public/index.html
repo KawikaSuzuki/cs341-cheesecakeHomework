@@ -1,0 +1,129 @@
+<!--Kawika Suzuki-->
+<!doctype html> 
+
+<html lang="en-US">
+
+<head>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/>
+ 	</script>
+	
+	<!--Start of javascript code-->
+	
+	<script> src="javascripts/Homework3.js" </script>
+	
+	<link rel="stylesheet" href="stylesheets/Homework2.css">
+	<title> Cheesecake Order Form </title>
+
+</head>
+
+<body>
+
+	<!--The title of the website-->
+
+	<h1 lang="en" id="title"> Cheesecake Order Form </h1> 
+	
+	<!--creating a class to separate the two image divs-->
+	 
+	<div class="firstImage">
+		<!--Use <a> to send a link of where the image is then img to create the image image-->
+
+		<a href="https://www.jocooks.com/recipes/cheesecake-recipe/"><img src="https://www.jocooks.com/wp-content/uploads/2018/11/cheesecake-1-22.jpg" alt="cheesecake" width="150" height="200"></a>
+		
+		
+	</div> 
+	
+	<p id="quantity"> Quantity Topping </p>
+
+	<div class="firstSelection">
+		<!--Creating a way to display the dropdown and radios side by side-->
+
+		<div style="width: 25%;">
+
+        		<div style="width: 15%; height: 75px; float: left;"> 
+        			<select id=dropDownMenu>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option> 
+				</select> 
+        		</div>
+        		
+			<!--use a margin left of 15% to put the radios next to the drop down-->
+
+			<div style="margin-left: 15%; height: 75px;"> 
+				
+				<!--give the radios the name flavors so they are in sync with each other-->
+        			
+				<input type="radio" name="flavors" value="Plain"><label>Plain</label> <br>
+
+				<input type="radio" name="flavors" value="Cherry"><label>Cherry</label> <br>
+	
+				<input type="radio" name="flavors" value="Chocolate"><label>Chocolate</label>
+        		</div>
+    		</div>	
+	
+	</div>
+
+	<br>
+		<label> Notes: </label> 
+	<br>
+
+	<!--print thank you and order form here-->
+	<p id="farewellMessage"></p>
+	
+	<p id="amountOfCake"></p>
+	
+	<p id="chosenFlavor"></p>
+	
+	<p id="setInstructions"></p>
+
+	<!--create a text box of 4x50 to have an ample amount of space to enter instructions-->
+
+	<textarea id="specialInstructions" name="special instructions" rows="4" cols="50"> 
+	Enter any special instructions here
+	</textarea>
+
+	<div>
+	
+	<button id="orderButton"> Order </button>
+	
+	</div>
+	
+	<div class="orderAndDropdown">
+
+		<p lang="en" id="totalOrders" class="dropdown"> Orders For </p>
+	
+		<div class="dropdown">
+  			<button onclick="myFunction()" class="dropbtn" id="selectedMonthButton">Jan</button>
+				<div id="myDropdown" class="dropdown-content">
+					<a class="option" href="#" value"Jan" onClick="changeButtonText(this.innerText)">Jan</a>
+    					<a class="option" href="#" value"Feb" onClick="changeButtonText(this.innerText)">Feb</a>
+    					<a class="option" href="#" value"Mar" onClick="changeButtonText(this.innerText)">Mar</a>
+    					<a class="option" href="#" value"Apr" onClick="changeButtonText(this.innerText)">Apr</a>
+					<a class="option" href="#" value"May" onClick="changeButtonText(this.innerText)">May</a>
+					<a class="option" href="#" value"Jun" onClick="changeButtonText(this.innerText)">Jun</a>
+					<a class="option" href="#" value"Jul" onClick="changeButtonText(this.innerText)">Jul</a>
+					<a class="option" href="#" value"Aug" onClick="changeButtonText(this.innerText)">Aug</a>
+					<a class="option" href="#" value"Sep" onClick="changeButtonText(this.innerText)">Sep</a>
+					<a class="option" href="#" value"Oct" onClick="changeButtonText(this.innerText)">Oct</a>
+					<a class="option" href="#" value"Nov" onClick="changeButtonText(this.innerText)">Nov</a>
+					<a class="option" href="#" value"Dec" onClick="changeButtonText(this.innerText)">Dec</a>
+  				</div>
+		</div>
+	
+	</div>
+	
+	<!--ul creates the bulleted list and li for the line item-->
+
+	<ul>
+		<li> 11 cherry </li>
+		<li> 17 chocolate </li>
+		<li> 31 plain </li>
+	</ul>
+ 
+</body>
+
+</html>
