@@ -65,4 +65,33 @@ window.onclick = function(event) {
 
 function changeButtonText(value) {
     document.getElementById("selectedMonthButton").innerText = value;
+    $('#selectedMonthButton').click(function changeBulletsText(){
+        $.post('/orders', 
+        null
+            /*put month in later*/
+        ,  
+        function changeBullets(data, status){
+            alert("Hello" + JSON.stringify(data) + "\nStatus: " + status);
+            // Update the list items
+            document.getElementById("cherryli").innerHTML = data[0].topping + " " + data[0].quantity;
+            document.getElementById("chocolateli").innerHTML = data[1].topping + " " + data[1].quantity;
+            document.getElementById("plainli").innerHTML = data[2].topping + " " + data[2].quantity;
+            for(let i = 0; i < data.length; i++) {
+                if(i === 0) {
+                    var liElement = document.getElementById("cherryli");
+                    liElement.innerHTML =  data[0].quantity + " " + data[0].topping;
+                }
+                else if(i === 1) {
+                    var liElement = document.getElementById("chocolateli");
+                    liElement.innerHTML =  data[1].quantity + " " + data[1].topping;
+                }
+                else {
+                    var liElement = document.getElementById("plainli");
+                    liElement.innerHTML = data[2].quantity + " " + data[2].topping;
+                }
+            } 
+        });
+    });
 }
+
+
