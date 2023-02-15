@@ -1,3 +1,4 @@
+//Kawika Suzuki
 $(function() {
     //This function called when the button is clicked
     $("#orderButton").click(function () {
@@ -71,11 +72,13 @@ function changeButtonText(value) {
             /*put month in later*/
         ,  
         function changeBullets(data, status){
+            //stringify data because it's a JSON object 
             alert("Hello" + JSON.stringify(data) + "\nStatus: " + status);
             // Update the list items
             document.getElementById("cherryli").innerHTML = data[0].topping + " " + data[0].quantity;
             document.getElementById("chocolateli").innerHTML = data[1].topping + " " + data[1].quantity;
             document.getElementById("plainli").innerHTML = data[2].topping + " " + data[2].quantity;
+            //go into a for loop for the orders (data) array and set the elements in the HTML to the database elements
             for(let i = 0; i < data.length; i++) {
                 if(i === 0) {
                     var liElement = document.getElementById("cherryli");
