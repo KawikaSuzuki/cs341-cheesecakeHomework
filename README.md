@@ -1,4 +1,5 @@
 🧀 Cheesecake Ordering Web App
+
 📌 Overview
 A full-stack web application that allows users to place custom cheesecake orders, view monthly order summaries, and receive real-time client-side validation. Built as part of a web development assignment to demonstrate end-to-end functionality using a MySQL database and Express server.
 
